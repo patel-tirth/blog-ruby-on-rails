@@ -1,5 +1,4 @@
-
-
+<%= render 'shared/errors' , obj: @article%>
 <div class="row">
     <div class="col-xs-12">
         <%= form_for(@article, :html=> {class: "form-horizontal", role:"form"}) do |f| %>
@@ -11,9 +10,7 @@
                     <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
                 </div>
             </div>
-                <% @article.errors.full_messages_for(:title).each do |message| %>
-                    <div><%= message %></div>
-                <% end %>
+               
 
              <div class="form-group">
                 <div class="control-label col-sm-2"> 
@@ -23,10 +20,6 @@
                     <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article" %>
                 </div>
             </div>
-                <% @article.errors.full_messages_for(:description).each do |message| %>
-                    <div><%= message %></div>
-                <% end %>
-            
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
