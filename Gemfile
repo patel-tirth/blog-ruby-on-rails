@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 
+gem 'rails-controller-testing' # for assert_template
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
